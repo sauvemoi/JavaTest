@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ListBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<User id="ryanK12">
+		<pwd>12345</pwd>>
+		<name>라이언 김</name>
+		<addr>서울 서초구</addr>>
+		<postNo>137-072</postNo>
+		<telNo>070-1111-2222</telNo>
+		<phoneNo>010-1234-1234</phoneNo>
+		<profileImg>farmer.jpg</profileImg>
+		<birth>1956년 12월 28일</birth>
+		<email>ryanK12@email.com</email>
+		<accountNo>1002-234-12343</accountNo>
+		<bank>우리은행</bank>
+	</User>
+	
+<!-- 	<User id="steveJ90">
+		<pwd>54321</pwd>>
+		<name>스티브 장</name>
+		<addr>서울 양천구</addr>>
+		<postNo>134-234</postNo>
+		<telNo>070-2222-3333</telNo>
+		<phoneNo>010-4321-4321</phoneNo>
+		<profileImg>farmer2.jpg</profileImg>
+		<birth>1970년 12월 28일</birth>
+		<email>steveJ90@email.com</email>
+		<accountNo>1002-1234-46573</accountNo>
+		<bank>우리은행</bank>
+	</User> -->
+	
+	
+	<Product userId="ryanK12">
+		<prodName>사과</prodName>
+		<price>2000</price>
+		<unit>개</unit>
+		<origin>충남 당진</origin>
+		<prodDetail>완전 맛남</prodDetail>
+		<endDate>2014년 8월 28일</endDate>
+		<manuDate>2014년 6월 28일</manuDate>
+		<prodImg>apple.jpg</prodImg>
+	</Product>
+	
+<!-- 	<Product userId="steveJ90">
+		<prodName>배추</prodName>
+		<price>1500</price>
+		<unit>포기</unit>
+		<origin>서울 김포</origin>
+		<prodDetail>초록초록</prodDetail>
+		<endDate>2014년 9월 23일</endDate>
+		<manuDate>2014년 4월 13일</manuDate>
+		<prodImg>baechoo.jpg</prodImg>
+	</Product> -->
+</ListBox>

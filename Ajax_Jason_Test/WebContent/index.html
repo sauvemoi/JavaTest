@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>끼리장터</title>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+
+	$('document').ready(function(){
+		
+		$.ajax({
+			url:'testJSON.json',
+			type:'GET',
+			dataType:'json',
+			success:function(data){
+				$('.farmerPic').html('<img src="images/'+data.User.profileImg+'"/>');
+				$('.farmerUpload').html('<p style="font-size:13px">농부 <a href="#" style="font-weight:bold;">'+data.User.name+'</a>님이 올린 상품</p>'+
+	                '<p style="font-size:11px; margin-top:3px">5분전</p>');
+				$('.dueDate').append('마감일 : '+data.Product.endDate);
+				$('.prodImg').append('<a href="detailView.html"><img src="images/'+data.Product.prodImg+'" /></a>');
+				$('.prodInfo').append('<p style="font-size:16px; font-weight:900; margin-top:4px">'+data.Product.prodName+'</p>'+
+	                    '<p style="font-size:14px; margin-top:8px">원산지 : '+data.Product.origin+'</p>'+
+	                    '<p style="font-size:16px; margin-top:8px"> ￦'+data.Product.price+'/'+data.Product.unit+'</p>');
+			}
+		
+		}); 
+		
+		
+			
+		/* $.getJSON('testJSON.json', function(data){
+			var user = data;
+			
+			$('.farmerPic').html('<img src="images/'+user.profileImg+'"/>');
+			$('.farmerUpload').html('<p style="font-size:13px">농부 <a href="#" style="font-weight:bold;">'+user.name+'</a>님이 올린 상품</p>'+
+                '<p style="font-size:11px; margin-top:3px">5분전</p>');
+		}); */
+		
+		
+		/* function xmlParser(data){
+			xml = data;
+			
+			$(xml).find("User").each(function(){
+				var id=$(this).attr("id");
+				var pwd=$(this).find("pwd").text();
+				var name=$(this).find("name").text();
+				var addr=$(this).find("addr").text();
+				var postNo=$(this).find("postNo").text();
+				var telNo=$(this).find("telNo").text();
+				var phoneNo=$(this).find("phoneNo").text();
+				var profileImg=$(this).find("profileImg").text();
+				var email=$(this).find("email").text();
+				var accountNo=$(this).find("accountNo").text();
+				var bank=$(this).find("bank").text();
+				
+				$('.farmerPic').append('<img src="images/'+profileImg+'"/>');
+				$('.farmerUpload').append('<p style="font-size:13px">농부 <a href="#" style="font-weight:bold;">'+name+'</a>님이 올린 상품</p>'+
+                    '<p style="font-size:11px; margin-top:3px">5분전</p>');
+				
+				
+			}
+			
+			
+			
+			);
+			
+			$(xml).find("Product").each(function(){
+				var userId=$(this).attr("userId");
+				var prodName=$(this).find("prodName").text();
+				var price=$(this).find("price").text();
+				var unit=$(this).find("unit").text();
+				var origin=$(this).find("origin").text();
+				var prodDetail=$(this).find("prodDetail").text();
+				var endDate=$(this).find("endDate").text();
+				var manuDate=$(this).find("manuDate").text();
+				var prodImg=$(this).find("prodImg").text();
+				
+				
+			});
+			
+		} */
+		
+	});//end of ready 
+
+	</script>
+</head>
+  <body>
+  <div class="bodyWrap">
+    
+    
+    
+    <div class="listBox">
+      <div class="shareComment">
+          <div class="shareIcon">
+            <img src="images/shareIcon.png" >
+          </div>
+        <div class="shareComments">
+                    	<p><a href="#">임새샘</a>님이 공유</p>
+                    </div>
+                </div>
+                
+                <div class="clear"></div>	
+      			<div class="break"> </div>
+            
+                <div class="farmerPic">
+                  
+                </div>
+                
+      			<div class="farmerUpload">
+                    	
+                </div>
+                
+                <div class="dueDate" >
+					
+                </div>
+                
+                <div class="clear"></div>	
+                <div style="height:8px"> </div>
+            
+                <div class="prodImg">
+                  
+                </div>
+                
+                <div class="prodInfo">
+                  
+                </div>
+                
+               
+	  <div class="shareButton">
+                    <input type="button" value="공유하기">
+                </div>
+                
+                <div class="clear"></div>	
+                <div style="height:4px"> </div>
+      </div>
+  </div>
+    </body>
+</html>
+
